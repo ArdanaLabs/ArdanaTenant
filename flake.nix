@@ -2,7 +2,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-21.11";
     nixinate.url = "github:matthewcroughan/nixinate";
-    danaswapstats.url = "git+ssh://git@github.com/ArdanaLabs/danaswapstats?ref=mc/fix-overlaying";
+    danaswapstats.url = "git+ssh://git@github.com/ArdanaLabs/danaswapstats";
     dana-circulating-supply.url = "git+ssh://git@github.com/ArdanaLabs/dana-circulating-supply?ref=main";
   };
   outputs = { self, nixpkgs, danaswapstats, dana-circulating-supply, nixinate, ... }@inputs: {

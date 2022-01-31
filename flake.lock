@@ -66,22 +66,21 @@
         "flake-compat-ci": "flake-compat-ci_2",
         "gitignore-hercules-src": "gitignore-hercules-src",
         "gitignore-src": "gitignore-src_2",
-        "nixpkgs": "nixpkgs_4",
+        "nixpkgs": "nixpkgs_3",
         "safe-coloured-text-src": "safe-coloured-text-src",
         "sydtest-src": "sydtest-src",
         "validity-src": "validity-src"
       },
       "locked": {
-        "lastModified": 1643341979,
-        "narHash": "sha256-uclxbgTUpq2xwhbVGKMF81AYYUBh2m/5oCaT0jfwAZk=",
-        "ref": "mc/fix-overlaying",
-        "rev": "e6ebe002dc85b3968afed06710b0fa10efaa9075",
-        "revCount": 389,
+        "lastModified": 1643601709,
+        "narHash": "sha256-kyHxm0U6MoXV+8IDNjVXOxXxBGsqVerrA6WeBWz1CSI=",
+        "ref": "master",
+        "rev": "3cb80160fd93e7ed4b6fa2c1824f122dd28a8b34",
+        "revCount": 395,
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/danaswapstats"
       },
       "original": {
-        "ref": "mc/fix-overlaying",
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/danaswapstats"
       }
@@ -106,7 +105,7 @@
     "examples": {
       "inputs": {
         "nixinate": "nixinate_2",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "narHash": "sha256-OsFQxO7h4YHrRQX8oHIjvgjTbeJx0oIP+pOIpfiwMiU=",
@@ -182,7 +181,10 @@
     },
     "gitignore-hercules-src": {
       "inputs": {
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": [
+          "danaswapstats",
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1634151530,
@@ -235,7 +237,7 @@
     "nixinate": {
       "inputs": {
         "examples": "examples",
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1643237928,
@@ -253,7 +255,7 @@
     },
     "nixinate_2": {
       "inputs": {
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "narHash": "sha256-lk8eIWYxtHqDT4ZmSFuXMlG067RdPqLCQocnN+hNE7U=",
@@ -299,19 +301,6 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1642104392,
-        "narHash": "sha256-m71b7MgMh9FDv4MnI5sg9MiBVW6DhE1zq+d/KlLWSC8=",
-        "path": "/nix/store/bfllm0im5z34n4v84zvip0kwy6vwl2yz-source",
-        "rev": "5aaed40d22f0d9376330b6fa413223435ad6fee5",
-        "type": "path"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
-      }
-    },
-    "nixpkgs_4": {
-      "locked": {
         "lastModified": 1638798756,
         "narHash": "sha256-VFuVwQ4YjPNnclRh6vcy5pR0AgPxlGeanVYBLVCr9ZI=",
         "owner": "nixos",
@@ -326,7 +315,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1640887906,
         "narHash": "sha256-Eupk1UlNicCD2UNZuEKt6yhE6kFWAxXM/HyziOjG9CA=",
@@ -342,7 +331,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1641147223,
         "narHash": "sha256-eJnmISYGR7LeqEev4bsI/qcU0SgeFKHs3jnL4vMGL+k=",
@@ -358,7 +347,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1640887906,
         "narHash": "sha256-Eupk1UlNicCD2UNZuEKt6yhE6kFWAxXM/HyziOjG9CA=",
@@ -374,7 +363,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_8": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1643247693,
         "narHash": "sha256-rmShxIuNjYBz4l83J0J++sug+MURUY1koPCzX4F8hfo=",
@@ -395,7 +384,7 @@
         "dana-circulating-supply": "dana-circulating-supply",
         "danaswapstats": "danaswapstats",
         "nixinate": "nixinate",
-        "nixpkgs": "nixpkgs_8"
+        "nixpkgs": "nixpkgs_7"
       }
     },
     "safe-coloured-text-src": {
