@@ -14,6 +14,6 @@ in
     };
   };
   services.udev.extraRules = ''
-    SUBSYSTEMS=="usb", ATTRS{product}=="YubiHSM", GROUP=="yubihsm"
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0030", GROUP="yubihsm", MODE="0666"
   '';
 }
