@@ -1,3 +1,4 @@
+#We obliterate channels here and reply purely on nix flake inputs. All users are tied the system flakes revision.
 { config, pkgs, lib, inputs, ...}:
 {
   environment.systemPackages = with pkgs; [ vim git ];
