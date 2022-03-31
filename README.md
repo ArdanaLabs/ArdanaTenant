@@ -1,4 +1,11 @@
 # ArdanaTenant
+[![Hercules-ci][Herc badge]][Herc link]
+[![Cachix Cache][Cachix badge]][Cachix link]
+
+[Herc badge]: https://img.shields.io/badge/ci--by--hercules-green.svg
+[Herc link]: https://hercules-ci.com/github/ArdanaLabs/ArdanaTenant
+[Cachix badge]: https://img.shields.io/badge/cachix-private_ArdanaLabs-blue.svg
+[Cachix link]: https://private-ardanalabs.cachix.org
 
 The machine(s) that run all of our software, defined as `nixosConfigurations` in a flake.nix
 
