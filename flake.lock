@@ -19,17 +19,15 @@
     },
     "dana-circulating-supply": {
       "inputs": {
-        "flake-compat": "flake-compat",
-        "flake-compat-ci": "flake-compat-ci",
         "gitignore-src": "gitignore-src",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1646420078,
-        "narHash": "sha256-mUaLTX3Koet7Gw9OrISPvkYOfPgvHoceckkW6FEPBNE=",
+        "lastModified": 1648768817,
+        "narHash": "sha256-ALUFf121Fb7K181qU5AU5oGN7hG+uUDwq2Ate203yOA=",
         "ref": "main",
-        "rev": "84e032948d66fe98112a2025c0bed93f297d9396",
-        "revCount": 30,
+        "rev": "ff3186106c27df1305112a2f37d12692f7ad84bb",
+        "revCount": 34,
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/dana-circulating-supply"
       },
@@ -62,8 +60,8 @@
         "compactable-src": "compactable-src",
         "danalib": "danalib",
         "easy-hls-src": "easy-hls-src",
-        "flake-compat": "flake-compat_2",
-        "flake-compat-ci": "flake-compat-ci_2",
+        "flake-compat": "flake-compat",
+        "flake-compat-ci": "flake-compat-ci",
         "gitignore-hercules-src": "gitignore-hercules-src",
         "gitignore-src": "gitignore-src_2",
         "nixpkgs": "nixpkgs_3",
@@ -120,11 +118,11 @@
     "flake-compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1641205782,
-        "narHash": "sha256-4jY7RCWUoZ9cKD8co0/4tFARpWB+57+r1bLLvXNJliY=",
+        "lastModified": 1627913399,
+        "narHash": "sha256-hY8g6H2KFL8ownSiFeMOjwPC8P0ueXpCVEbxgda3pko=",
         "owner": "edolstra",
         "repo": "flake-compat",
-        "rev": "b7547d3eed6f32d06102ead8991ec52ab0a4f1a7",
+        "rev": "12c64ca55c1014cdc1b16ed5a804aa8576601ff2",
         "type": "github"
       },
       "original": {
@@ -134,21 +132,6 @@
       }
     },
     "flake-compat-ci": {
-      "locked": {
-        "lastModified": 1641672839,
-        "narHash": "sha256-Bdwv+DKeEMlRNPDpZxSz0sSrqQBvdKO5fZ8LmvrgCOU=",
-        "owner": "hercules-ci",
-        "repo": "flake-compat-ci",
-        "rev": "e832114bc18376c0f3fa13c19bf5ff253cc6570a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-compat-ci",
-        "type": "github"
-      }
-    },
-    "flake-compat-ci_2": {
       "locked": {
         "lastModified": 1629629549,
         "narHash": "sha256-c6Hipyp52MZ2pTFXEIRdcLK2rtKt9jggCQ7ZOgBS44k=",
@@ -160,22 +143,6 @@
       "original": {
         "owner": "hercules-ci",
         "repo": "flake-compat-ci",
-        "type": "github"
-      }
-    },
-    "flake-compat_2": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1627913399,
-        "narHash": "sha256-hY8g6H2KFL8ownSiFeMOjwPC8P0ueXpCVEbxgda3pko=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "12c64ca55c1014cdc1b16ed5a804aa8576601ff2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
         "type": "github"
       }
     },
