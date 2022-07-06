@@ -23,11 +23,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1651498104,
-        "narHash": "sha256-y5rj2E3W1TyidIWvXRU0lefEWZsFbOun7/6AfaTBBvw=",
+        "lastModified": 1657051048,
+        "narHash": "sha256-FM7dav1W3AT4LKhCXlK9zfnxryO/hc8cQma9mITzKvw=",
         "ref": "main",
-        "rev": "9a738be58533c14c58d6d187cb0a156e3a38e01a",
-        "revCount": 40,
+        "rev": "f82ae98fa7a663411790599779317bf5c56d9207",
+        "revCount": 41,
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/dana-circulating-supply"
       },
