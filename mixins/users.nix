@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 let
+  yusuf = {
+    key1 = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDUeDBW4hnHgnT0SjVFeGDztht9owObSmiyWXmmIEGQp2IMPqFpCxkOU61osvfCf4ZT92Ok9iJTohLwFBvHJRD/+CH8/b54sgFAx1lLObkJOMLz4iWZ5y4fNtBYuIA2McQSQoMDpDz6TDym7v7HF7zoUyBmfHMT/9WiX/z6Ft9hY63eh9DcF7WVURzeUvXLApt9wUYUxxdC2KZ/VrDPrIOxCcOgj3le+1zTiD8zwfAGhkzRD3IEx0yCYK6oztrh6WTwA5ZW+cLziH2sVEvSHFa2O398gIvZpzsdYTcQt06d/oyZIvftcpxD8IvjpGgHEsN/mAg0ovexyqAVk+TV/1XySKaoPPVCekap0R50CVD9kEk+GlD78XBYi++aAMIq0/D+NOXkgksfODt3yJPPzQx4KH8gcn0dQJM5zeyTwDfclzMRqCwL1eVHY00EbtG9IcLmMsWk/lM6vpHfyHqHlqNJ3CnUuDBccz9p5ORC1cuj4r9CmXPPmh7OYk7gGiQb4oxuqsYClzp93qmU7qMvGwmxBJaVagNIJgBqb5fsne0OMlcer5CH4L31ozszkSkzCXtFWNoTdgQHU1J3DxxL9WQJCfKku4EPJadYOh80USnauOke5CqfsGtf6uMq4l5Ylcc1QcNhRqxpeTLAIZx0EYDhmQ4eGjAZbiv6ddUp9dAdiQ==";
+  };
   isaac = {
     key1 = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKZzKmSxSVqol+YNsGr5Cts5Cr/eIHqCm/KISHsluVtJ isaac@dunlap";
   };
@@ -24,7 +27,13 @@ in
     users = {
       deploy = {
         isNormalUser = true;
-        openssh.authorizedKeys.keys = [ matthew.key1 matthew.key2 ];
+        openssh.authorizedKeys.keys = [ matthew.key1 matthew.key2 yusuf.key1 ];
+      };
+      yusuf = {
+        isNormalUser = true;
+        openssh.authorizedKeys.keys = [ yusuf.key1 ];
+        extraGroups = [ "wheel" ];
+        hashedPassword = "$6$wZnyFXlzYYB3kAQd$jNvHAUfrEsPr4ADo8yiKNWId5sBLdUIBvUY6fKCWfMglBoFX497GkU3fslZ6wLEunxvFxoxNUD1/pOdx7ZNXW1";
       };
       matthew = {
         isNormalUser = true;

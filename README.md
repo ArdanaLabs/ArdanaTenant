@@ -9,7 +9,9 @@
 
 The machine(s) that run all of our software, defined as `nixosConfigurations` in a flake.nix
 
-Responsible: Matthew Croughan (matt@croughan.sh), Lee Hughes (lee.hughes@platonic.systems)
+Currently Responsible: Yusuf Bera Ertan (yusuf.bera.ertan@platonic.systems)
+
+Formerly Responsible: Matthew Croughan (matt@croughan.sh)
 
 ## Deploy with Nix
 
