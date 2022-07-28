@@ -46,15 +46,16 @@
             let
               pkgs = nixpkgs.legacyPackages."x86_64-linux";
               effects = hci-effects.lib.withPkgs pkgs;
+              inherit (effect) runIf mkEffect;
             in
-              effects.mkEffect {
+              runIf (branch == "master") (mkEffect {
                 effectScript = ''
                   # deploy tenant (dry run)
                   ${self.apps.nixinate.tenant-dry-run}
                   # deploy tenant
                   ${self.apps.nixinate.tenant}
                 '';
-              };
+              });
         };
       };
     };
