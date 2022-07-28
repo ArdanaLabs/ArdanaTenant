@@ -46,7 +46,7 @@
             let
               pkgs = nixpkgs.legacyPackages."x86_64-linux";
               effects = hci-effects.lib.withPkgs pkgs;
-              inherit (effect) runIf mkEffect;
+              inherit (effects) runIf mkEffect;
             in
               runIf (branch == "master") (mkEffect {
                 effectScript = ''
