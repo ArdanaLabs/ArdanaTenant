@@ -49,6 +49,13 @@
               inherit (effects) runIf mkEffect;
             in
               runIf (branch == "master") (mkEffect {
+                secretsMap.ssh = "default-ssh";
+                userSetupScript = ''
+                  writeSSHKey ssh
+                  cat >>~/.ssh/known_hosts <<EOF
+                    216.24.131.4 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOkK+eMwud2J9oYUhIWfmDRsfn1DfaGxtt3EM/BUPmcp
+                  EOF
+                '';
                 effectScript = ''
                   # deploy tenant (dry run)
                   ${self.apps.nixinate.tenant-dry-run}
