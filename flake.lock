@@ -60,8 +60,6 @@
         "compactable-src": "compactable-src",
         "danalib": "danalib",
         "easy-hls-src": "easy-hls-src",
-        "flake-compat": "flake-compat",
-        "flake-compat-ci": "flake-compat-ci",
         "gitignore-hercules-src": "gitignore-hercules-src",
         "gitignore-src": "gitignore-src_2",
         "nixpkgs": "nixpkgs_3",
@@ -70,11 +68,11 @@
         "validity-src": "validity-src"
       },
       "locked": {
-        "lastModified": 1646145218,
-        "narHash": "sha256-EbXUD/tdZxs6Dcc6Zlwv5OLGxXEoX8URZYNpCXVLBYg=",
-        "ref": "master",
-        "rev": "04b89154ccd726a3b5b8a2c94739d7fd71b25dbb",
-        "revCount": 407,
+        "lastModified": 1648725597,
+        "narHash": "sha256-PZV6CKXv7IVjJeWzhYQoh5rCAszyCYMGejOFFkgfrsU=",
+        "ref": "refs/heads/master",
+        "rev": "6f899d6f39a5d46a08c4a180cb216c16005c4931",
+        "revCount": 415,
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/danaswapstats"
       },
@@ -97,52 +95,6 @@
         "owner": "jkachmar",
         "repo": "easy-hls-nix",
         "rev": "db85cac9d0405b4769b75cba0b004aed3beaf2de",
-        "type": "github"
-      }
-    },
-    "examples": {
-      "inputs": {
-        "nixinate": "nixinate_2",
-        "nixpkgs": "nixpkgs_5"
-      },
-      "locked": {
-        "narHash": "sha256-OsFQxO7h4YHrRQX8oHIjvgjTbeJx0oIP+pOIpfiwMiU=",
-        "path": "./examples",
-        "type": "path"
-      },
-      "original": {
-        "path": "./examples",
-        "type": "path"
-      }
-    },
-    "flake-compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1627913399,
-        "narHash": "sha256-hY8g6H2KFL8ownSiFeMOjwPC8P0ueXpCVEbxgda3pko=",
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "rev": "12c64ca55c1014cdc1b16ed5a804aa8576601ff2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "edolstra",
-        "repo": "flake-compat",
-        "type": "github"
-      }
-    },
-    "flake-compat-ci": {
-      "locked": {
-        "lastModified": 1629629549,
-        "narHash": "sha256-c6Hipyp52MZ2pTFXEIRdcLK2rtKt9jggCQ7ZOgBS44k=",
-        "owner": "hercules-ci",
-        "repo": "flake-compat-ci",
-        "rev": "ef10daf1cb1823086ed547d39806aaca4c53cc17",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-compat-ci",
         "type": "github"
       }
     },
@@ -203,35 +155,22 @@
     },
     "nixinate": {
       "inputs": {
-        "examples": "examples",
-        "nixpkgs": "nixpkgs_6"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1644196782,
-        "narHash": "sha256-pRRnb3odtYsfQGhHkkQ+DXu3/Uv0s+BG806ETwZGexY=",
+        "lastModified": 1654872030,
+        "narHash": "sha256-a1e49vvdEapkG9tbC0WLEemLGXbMR6hEBeW22aGwueQ=",
         "owner": "matthewcroughan",
         "repo": "nixinate",
-        "rev": "9299d595e80dbe52fca1d126066bc98ca471ab22",
+        "rev": "0f53b4f183fbde2ba2b50d3e7dd910b86ea179ed",
         "type": "github"
       },
       "original": {
         "owner": "matthewcroughan",
         "repo": "nixinate",
         "type": "github"
-      }
-    },
-    "nixinate_2": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_4"
-      },
-      "locked": {
-        "narHash": "sha256-lk8eIWYxtHqDT4ZmSFuXMlG067RdPqLCQocnN+hNE7U=",
-        "path": "/etc/nixos/nixinate",
-        "type": "path"
-      },
-      "original": {
-        "path": "/etc/nixos/nixinate",
-        "type": "path"
       }
     },
     "nixpkgs": {
@@ -284,64 +223,16 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1640887906,
-        "narHash": "sha256-Eupk1UlNicCD2UNZuEKt6yhE6kFWAxXM/HyziOjG9CA=",
+        "lastModified": 1660496378,
+        "narHash": "sha256-sgAhmrC1iSnl5T2VPPiMpciH1aRw5c7PYEdXX6jd6Gk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8a053bc2255659c5ca52706b9e12e76a8f50dbdd",
+        "rev": "879121648fe522b38cc1cf75aef160a14a1f2e7b",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-21.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_5": {
-      "locked": {
-        "lastModified": 1641147223,
-        "narHash": "sha256-eJnmISYGR7LeqEev4bsI/qcU0SgeFKHs3jnL4vMGL+k=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "08370e1e271f6fe00d302bebbe510fe0e2c611ca",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-21.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_6": {
-      "locked": {
-        "lastModified": 1643852787,
-        "narHash": "sha256-RHrvroV61jcfTXfW0Rwc0qu/8lHmfYxSy49adyXkB0I=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "76e3df7c0687d5b9ff31431fd4ee4d4cd07a4b2f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_7": {
-      "locked": {
-        "lastModified": 1644125761,
-        "narHash": "sha256-M1cSkPqjOBAN4RMXhQ0YC5AOvxU+i9E9SZ+grFrs7SU=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "df4f1f7cc3fc5eb4c5a24adb0a6df889863c9d62",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-21.11",
+        "ref": "nixos-22.05",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -351,7 +242,7 @@
         "dana-circulating-supply": "dana-circulating-supply",
         "danaswapstats": "danaswapstats",
         "nixinate": "nixinate",
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_4"
       }
     },
     "safe-coloured-text-src": {
