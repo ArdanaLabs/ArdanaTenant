@@ -9,36 +9,67 @@
   outputs = {
     self,
     nixpkgs,
-    danaswapstats,
-    dana-circulating-supply,
-    nixinate,
     hci-effects,
     ...
-  }@inputs: {
-    apps = nixinate.nixinate.x86_64-linux self;
-    nixosConfigurations = {
-      # tenant is the co-located machine that Isaac provisioned. It is running
-      # at the IP address 216.24.131.4
-      tenant = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          (import ./hosts/tenant/configuration.nix)
-          (import ./mixins/common.nix)
-          danaswapstats.nixosModules.danaswapstats 
-          dana-circulating-supply.nixosModules.dana-circulating-supply
-          {
-            _module.args = {
-               nixinate = {
-                 host = "216.24.131.4";
-                 sshUser = "deploy";
-                 buildOn = "local";
-               };
-            };
-          }
-        ];
-        specialArgs = { inherit inputs; };
+  }@inputs:
+  let
+    makeNixosOutputs = {
+      nixinate,
+      danaswapstats,
+      dana-circulating-supply,
+      nixpkgs,
+      ...
+    }@inputs:
+      let
+        nixosConfigurations = {
+          # tenant is the co-located machine that Isaac provisioned. It is running
+          # at the IP address 216.24.131.4
+          tenant = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+            modules = [
+              (import ./hosts/tenant/configuration.nix)
+              (import ./mixins/common.nix)
+              danaswapstats.nixosModules.danaswapstats
+              dana-circulating-supply.nixosModules.dana-circulating-supply
+              {
+                _module.args = {
+                   nixinate = {
+                     host = "216.24.131.4";
+                     sshUser = "deploy";
+                     buildOn = "local";
+                   };
+                };
+              }
+            ];
+            specialArgs = { inherit inputs; };
+          };
+        };
+      in {
+        inherit nixosConfigurations;
+        apps = nixinate.nixinate.x86_64-linux (
+          inputs.self // {inherit nixosConfigurations;}
+        );
       };
-    };
+    flakeLock = builtins.fromJSON (builtins.readFile ./flake.lock);
+    outputsForLocalCheckout = makeNixosOutputs inputs;
+    outputsForCI =
+      let
+        makeFlakeInput = url: node: builtins.getFlake "${url}/${node.rev}?narHash=${node.narHash}";
+      in
+        makeNixosOutputs (
+          inputs // {
+            danaswapstats =
+              makeFlakeInput
+              "github:ArdanaLabs/danaswapstats"
+              flakeLock.nodes."danaswapstats".locked;
+            dana-circulating-supply =
+              makeFlakeInput
+              "github:ArdanaLabs/dana-circulating-supply"
+              flakeLock.nodes."dana-circulating-supply".locked;
+          }
+        );
+  in
+  outputsForLocalCheckout // {
     herculesCI = { branch, ... }: {
       onPush.default = {
         outputs.effects = {
@@ -58,9 +89,9 @@
                 '';
                 effectScript = ''
                   # deploy tenant (dry run)
-                  ${self.apps.nixinate.tenant-dry-run}
+                  ${outputsForCI.apps.nixinate.tenant-dry-run.program}
                   # deploy tenant
-                  ${self.apps.nixinate.tenant}
+                  ${outputsForCI.apps.nixinate.tenant.program}
                 '';
               });
         };
