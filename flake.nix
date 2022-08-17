@@ -49,7 +49,7 @@
               inherit (effects) runIf mkEffect;
             in
               runIf (branch == "master") (mkEffect {
-                secretsMap.ssh = "default-ssh";
+                secretsMap.ssh = "tenantDeployKeys";
                 userSetupScript = ''
                   writeSSHKey ssh
                   cat >>~/.ssh/known_hosts <<EOF
