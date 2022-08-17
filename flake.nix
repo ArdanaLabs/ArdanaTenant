@@ -1,11 +1,15 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.05";
+
     nixinate.url = "github:matthewcroughan/nixinate";
     nixinate.inputs.nixpkgs.follows = "nixpkgs";
+
+    hci-effects.url = "github:hercules-ci/hercules-ci-effects";
+    hci-effects.inputs.nixpkgs.follows = "nixpkgs";
+
     danaswapstats.url = "git+ssh://git@github.com/ArdanaLabs/danaswapstats";
     dana-circulating-supply.url = "git+ssh://git@github.com/ArdanaLabs/dana-circulating-supply?ref=main";
-    hci-effects.url = "github:hercules-ci/hercules-ci-effects";
   };
   outputs = {
     self,
