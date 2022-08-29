@@ -11,7 +11,7 @@ in
     groups.yubihsm = {};
     users.hsm = {
       isNormalUser = true; 
-      openssh.authorizedKeys.keys = with hsm; [ michael nick evan ];
+      openssh.authorizedKeys.keys = with hsm; [ michael nick evan brian ];
       extraGroups = [ "yubihsm" ];
     };
   };
