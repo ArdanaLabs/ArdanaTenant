@@ -9,9 +9,9 @@
 
 The machine(s) that run all of our software, defined as `nixosConfigurations` in a flake.nix
 
-Currently Responsible: Yusuf Bera Ertan (yusuf.bera.ertan@platonic.systems)
+Currently Responsible: Marijan Petričević (marijan.petricevic@platonic.systems)
 
-Formerly Responsible: Matthew Croughan (matt@croughan.sh)
+Formerly Responsible: Yusuf Bera Ertan (yusuf.bera.ertan@platonic.systems)
 
 ## Deploy with Nix
 
