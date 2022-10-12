@@ -10,6 +10,7 @@
 
     danaswapstats.url = "git+ssh://git@github.com/ArdanaLabs/danaswapstats";
     dana-circulating-supply.url = "git+ssh://git@github.com/ArdanaLabs/dana-circulating-supply?ref=main";
+    cardano-app-template.url = "github:ArdanaLabs/cardano-app-template/hello-world-nixos-module";
   };
   outputs = {
     self,
@@ -23,6 +24,7 @@
     mkTenantSystem = {
       danaswapstats,
       dana-circulating-supply,
+      cardano-app-template,
       nixpkgs,
       ...
     }@inputs:
@@ -33,6 +35,7 @@
           (import ./mixins/common.nix)
           danaswapstats.nixosModules.danaswapstats
           dana-circulating-supply.nixosModules.dana-circulating-supply
+          cardano-app-template.nixosModules.hello-world
           {
             _module.args = {
                nixinate = {
