@@ -13,6 +13,7 @@
         services = {
           dana-circulating-supply.loadBalancer.servers = [ { url = "http://127.0.0.1:${toString config.services.dana-circulating-supply.port}"; } ];
           danaswapstats.loadBalancer.servers = [ { url = "http://127.0.0.1:${toString config.services.danaswapstats.port}"; } ];
+          hello-world.loadBalancer.servers = [{ url = "http://127.0.0.1:${toString config.services.hello-world.port}"; }];
         };
         routers = {
           dana-circulating-supply-insecure = {
@@ -37,6 +38,18 @@
             rule = "Host(`stats.ardana.org`)";
             entryPoints = [ "websecure" ];
             service = "danaswapstats";
+            tls.certresolver = "letsencrypt";
+          };
+          hello-world-insecure = {
+            rule = "Host(`hello-world.ardana.org`)";
+            entryPoints = [ "web" ];
+            service = "hello-world";
+            middlewares = "redirect-to-https";
+          };
+          hello-world = {
+            rule = "Host(`hello-world.ardana.org`)";
+            entryPoints = [ "websecure" ];
+            service = "hello-world";
             tls.certresolver = "letsencrypt";
           };
         };

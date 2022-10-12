@@ -48,6 +48,11 @@
       enable = true;
       passwordAuthentication = false;
     };
+    hello-world = {
+      enable = true;
+      port = 8003;
+    };
+    cardano-node.environment = pkgs.lib.mkForce "mainnet";
   };
 
   # This value determines the NixOS release from which the default
