@@ -95,7 +95,7 @@
               # Only run this effect on master branch.
               # The CI will build the dependencies of this effect even if it won't run.
               runIf (branch == "master") (mkEffect {
-                inputs = [ pkgs.openssh ];
+                inputs = [ pkgs.openssh pkgs.git ];
                 secretsMap.ssh = "tenantDeployKeys";
                 userSetupScript = ''
                   writeSSHKey ssh
