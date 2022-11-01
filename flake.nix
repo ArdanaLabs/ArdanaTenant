@@ -50,6 +50,16 @@
         };
     in
     {
+      checks.x86_64-linux.format =
+        let pkgs =
+          nixpkgs.legacyPackages.x86_64-linux;
+        in
+        pkgs.runCommand "check-fmt" { } ''
+          set -euo pipefail
+          ${pkgs.nixpkgs-fmt}/bin/nixpkgs-fmt ${self} --check
+          touch $out
+        '';
+
       apps = nixinate.nixinate.x86_64-linux self;
       nixosConfigurations = {
         tenant = mkTenantSystem inputs;
