@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/yubihsm.nix
       ./modules/traefik.nix
@@ -25,7 +26,8 @@
     interfaces = {
       eno1.useDHCP = false;
       eno1.ipv4.addresses = [
-        { address = "216.24.131.4";
+        {
+          address = "216.24.131.4";
           prefixLength = 29;
         }
       ];
