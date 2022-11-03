@@ -8,9 +8,9 @@ let
 in
 {
   users = {
-    groups.yubihsm = {};
+    groups.yubihsm = { };
     users.hsm = {
-      isNormalUser = true; 
+      isNormalUser = true;
       openssh.authorizedKeys.keys = with hsm; [ michael nick evan brian ];
       extraGroups = [ "yubihsm" ];
     };

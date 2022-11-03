@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "ehci_pci" "usb_storage" "usbhid" "sd_mod" ];
@@ -14,22 +15,24 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "tank/system/root";
+    {
+      device = "tank/system/root";
       fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/ACE7-7142";
+    {
+      device = "/dev/disk/by-uuid/ACE7-7142";
       fsType = "vfat";
     };
 
   fileSystems."/nix" =
-    { device = "tank/local/nix";
+    {
+      device = "tank/local/nix";
       fsType = "zfs";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/c083ba13-e97b-4c21-b8ca-51c13ba226f1"; }
-    ];
+    [{ device = "/dev/disk/by-uuid/c083ba13-e97b-4c21-b8ca-51c13ba226f1"; }];
 
 }

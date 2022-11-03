@@ -11,8 +11,8 @@
       };
       http = {
         services = {
-          dana-circulating-supply.loadBalancer.servers = [ { url = "http://127.0.0.1:${toString config.services.dana-circulating-supply.port}"; } ];
-          danaswapstats.loadBalancer.servers = [ { url = "http://127.0.0.1:${toString config.services.danaswapstats.port}"; } ];
+          dana-circulating-supply.loadBalancer.servers = [{ url = "http://127.0.0.1:${toString config.services.dana-circulating-supply.port}"; }];
+          danaswapstats.loadBalancer.servers = [{ url = "http://127.0.0.1:${toString config.services.danaswapstats.port}"; }];
           hello-world.loadBalancer.servers = [{ url = "http://127.0.0.1:${toString config.services.hello-world.port}"; }];
         };
         routers = {
@@ -68,7 +68,7 @@
       certificatesResolvers = {
         letsencrypt.acme = {
           email = "letsencrypt@croughan.sh";
-#          caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"; # Uncomment to use ACME staging server
+          #          caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"; # Uncomment to use ACME staging server
           storage = "/var/lib/traefik/cert.json";
           httpChallenge = {
             entryPoint = "web";
