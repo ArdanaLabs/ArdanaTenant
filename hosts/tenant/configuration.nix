@@ -53,6 +53,41 @@
     hello-world = {
       enable = true;
       port = 8003;
+      ctlRuntimeConfig.local = {
+        ogmiosConfig = {
+          host = "127.0.0.1";
+          port = 8004;
+          secure = false;
+        };
+        datumCacheConfig = {
+          host = "127.0.0.1";
+          port = 8005;
+          secure = false;
+        };
+        ctlServerConfig = {
+          host = "127.0.0.1";
+          port = 8006;
+          secure = false;
+        };
+      };
+      ctlRuntimeConfig.public = {
+        # to understand these values, see hosts/tenant/moudules/traefik.nix
+        ogmiosConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/ogmios";
+        };
+        datumCacheConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/odt";
+        };
+        ctlServerConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/ctl";
+        };
+      };
     };
     cardano-node.environment = pkgs.lib.mkForce "mainnet";
   };
