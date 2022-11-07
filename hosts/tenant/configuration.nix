@@ -71,7 +71,7 @@
         };
       };
       ctlRuntimeConfig.public = {
-        # to understand these values, see hosts/tenant/moudules/traefik.nix
+        # to understand these values, see hosts/tenant/moudules/nginx.nix
         ogmiosConfig = {
           host = "hello.ardana.org";
           port = 443;
