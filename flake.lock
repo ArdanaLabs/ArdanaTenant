@@ -1857,11 +1857,11 @@
         "nixpkgs-new": "nixpkgs-new"
       },
       "locked": {
-        "lastModified": 1664547363,
-        "narHash": "sha256-pyxGuec7L1741mATKR7TpMQx8YidVEk0HYWAoMINgkw=",
+        "lastModified": 1667833102,
+        "narHash": "sha256-1VDbnpwTqrbbVT/rzeoAQthzFBRut1WTTNLP25CGPwo=",
         "ref": "main",
-        "rev": "8777c919971ddb5f2c9f689ae74b468b234bc5b2",
-        "revCount": 73,
+        "rev": "6e81eb311b5e1ab7d424841b17453cf82c571427",
+        "revCount": 76,
         "type": "git",
         "url": "ssh://git@github.com/ArdanaLabs/dana-circulating-supply"
       },
