@@ -60,12 +60,12 @@
           secure = false;
         };
         datumCacheConfig = {
-          host = "127.0.0.1";
+          host = "0.0.0.0";
           port = 8005;
           secure = false;
         };
         ctlServerConfig = {
-          host = "127.0.0.1";
+          host = "0.0.0.0";
           port = 8006;
           secure = false;
         };
@@ -80,7 +80,7 @@
         datumCacheConfig = {
           host = "hello.ardana.org";
           port = 443;
-          path = "ctl/odt";
+          path = "ctl/odc";
         };
         ctlServerConfig = {
           host = "hello.ardana.org";
@@ -90,6 +90,10 @@
       };
     };
     cardano-node.environment = pkgs.lib.mkForce "mainnet";
+    ogmios-datum-cache.blockFetcher.firstBlock = {
+      blockHash = "6e5a263f758cd8d68704a52c55c925b996f0553949795fe79ab7db8349bea5f4";
+      slot = 76267843;
+    };
   };
 
   # This value determines the NixOS release from which the default
