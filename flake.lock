@@ -4369,11 +4369,11 @@
         "yubihsm": "yubihsm"
       },
       "locked": {
-        "lastModified": 1667840170,
-        "narHash": "sha256-4HfzGyM7I4eMQeQi3kPscag56WgCti/IJFUkq3bxsIk=",
+        "lastModified": 1667862176,
+        "narHash": "sha256-W/Joc/3SY3zyFpPl8NlhEVi3wEyUUMSKEJy5LjKEuNU=",
         "owner": "ArdanaLabs",
         "repo": "hello-cardano-template",
-        "rev": "6ba053ce9e4dc02831e08ca983ed56bf303b6372",
+        "rev": "ef089125de3f050642d0aad646d19d2d90cf4ad0",
         "type": "github"
       },
       "original": {
