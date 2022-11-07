@@ -5,7 +5,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/yubihsm.nix
-      ./modules/traefik.nix
+      ./modules/nginx.nix
       ../../mixins/users.nix
     ];
 
