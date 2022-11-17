@@ -5,7 +5,7 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/yubihsm.nix
-      ./modules/traefik.nix
+      ./modules/nginx.nix
       ../../mixins/users.nix
     ];
 
@@ -53,8 +53,47 @@
     hello-world = {
       enable = true;
       port = 8003;
+      ctlRuntimeConfig.local = {
+        ogmiosConfig = {
+          host = "127.0.0.1";
+          port = 8004;
+          secure = false;
+        };
+        datumCacheConfig = {
+          host = "0.0.0.0";
+          port = 8005;
+          secure = false;
+        };
+        ctlServerConfig = {
+          host = "0.0.0.0";
+          port = 8006;
+          secure = false;
+        };
+      };
+      ctlRuntimeConfig.public = {
+        # to understand these values, see hosts/tenant/moudules/nginx.nix
+        ogmiosConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/ogmios";
+        };
+        datumCacheConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/odc";
+        };
+        ctlServerConfig = {
+          host = "hello.ardana.org";
+          port = 443;
+          path = "ctl/ctl";
+        };
+      };
     };
     cardano-node.environment = pkgs.lib.mkForce "mainnet";
+    ogmios-datum-cache.blockFetcher.firstBlock = {
+      blockHash = "6e5a263f758cd8d68704a52c55c925b996f0553949795fe79ab7db8349bea5f4";
+      slot = 76267843;
+    };
   };
 
   # This value determines the NixOS release from which the default
