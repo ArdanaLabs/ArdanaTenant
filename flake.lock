@@ -1644,16 +1644,16 @@
       },
       "locked": {
         "lastModified": 1664916044,
-        "narHash": "sha256-02aYFdkV6L2BgmW9J7YOdZS/lEf9198WvSH9+z10mCs=",
+        "narHash": "sha256-MpH7D1bbd/9SKEaEOleArtMIoQQfhOyaBmKBN3pYrZc=",
         "owner": "Plutonomicon",
         "repo": "cardano-transaction-lib",
-        "rev": "1999bb962141ffea09767f299a5759420097d189",
+        "rev": "67ae3d1a3e7128cb7f58a5b4ba365aae37133045",
         "type": "github"
       },
       "original": {
         "owner": "Plutonomicon",
         "repo": "cardano-transaction-lib",
-        "rev": "1999bb962141ffea09767f299a5759420097d189",
+        "rev": "67ae3d1a3e7128cb7f58a5b4ba365aae37133045",
         "type": "github"
       }
     },
@@ -4369,11 +4369,11 @@
         "yubihsm": "yubihsm"
       },
       "locked": {
-        "lastModified": 1668643164,
-        "narHash": "sha256-DXpI1DaYRHJjFErjz4lwotH6yCaNqgDSG49fjCrRvso=",
+        "lastModified": 1668721604,
+        "narHash": "sha256-AMzoGhQCvcuhzf7ciNxXlfhEIo378rRzHSrVsUyhibA=",
         "owner": "ArdanaLabs",
         "repo": "hello-cardano-template",
-        "rev": "aae1e1e05fb671ca4cb3459b2610317dc07ea422",
+        "rev": "9913f4e9d8409fd28984a2b43ca2e6db0d3f9bcc",
         "type": "github"
       },
       "original": {
