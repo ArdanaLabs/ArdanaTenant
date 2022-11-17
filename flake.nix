@@ -10,7 +10,7 @@
 
     danaswapstats.url = "git+ssh://git@github.com/ArdanaLabs/danaswapstats";
     dana-circulating-supply.url = "git+ssh://git@github.com/ArdanaLabs/dana-circulating-supply?ref=main";
-    hello-cardano-template.url = "github:ArdanaLabs/hello-cardano-template/hello-world-nixos-module";
+    hello-cardano-template.url = "github:ArdanaLabs/hello-cardano-template";
   };
   outputs =
     { self

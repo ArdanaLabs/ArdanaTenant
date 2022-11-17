@@ -4369,16 +4369,15 @@
         "yubihsm": "yubihsm"
       },
       "locked": {
-        "lastModified": 1667862176,
-        "narHash": "sha256-W/Joc/3SY3zyFpPl8NlhEVi3wEyUUMSKEJy5LjKEuNU=",
+        "lastModified": 1668643164,
+        "narHash": "sha256-DXpI1DaYRHJjFErjz4lwotH6yCaNqgDSG49fjCrRvso=",
         "owner": "ArdanaLabs",
         "repo": "hello-cardano-template",
-        "rev": "ef089125de3f050642d0aad646d19d2d90cf4ad0",
+        "rev": "aae1e1e05fb671ca4cb3459b2610317dc07ea422",
         "type": "github"
       },
       "original": {
         "owner": "ArdanaLabs",
-        "ref": "hello-world-nixos-module",
         "repo": "hello-cardano-template",
         "type": "github"
       }
